@@ -6,11 +6,16 @@
 
 package com.example.book.Book;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.book.R;
+import com.example.book.StoreList.StoreListMainActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +29,7 @@ public class BookMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.book_main);
 
         // Initialize Views
         recyclerView = findViewById(R.id.recyclerView);
@@ -42,6 +47,12 @@ public class BookMainActivity extends AppCompatActivity {
         // Tab Listeners (simplified with lambdas)
         fictionTab.setOnClickListener(v -> bookAdapter.updateBooks(fictionBooks));
         nonFictionTab.setOnClickListener(v -> bookAdapter.updateBooks(nonFictionBooks));
+
+        Button moveToStoreListButton = findViewById(R.id.moveToStoreListButton);
+        moveToStoreListButton.setOnClickListener(v -> {
+            Intent intent = new Intent(BookMainActivity.this, StoreListMainActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void initializeBooks() {

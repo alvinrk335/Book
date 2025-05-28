@@ -31,7 +31,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#1E3628"
-            android:text="Non-Fiction" />
+            android:text="Non-Fiction"
+            android:layout_marginEnd="7dp"/>
+        <Button
+            android:id="@+id/moveToStoreListButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="move page"
+            />
     </LinearLayout>
 
     <!-- Book List -->

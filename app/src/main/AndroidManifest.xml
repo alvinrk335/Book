@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Book.BookDetailActivity" />
+        <activity android:name=".StoreList.StoreListMainActivity" />
+
     </application>
 
 </manifest>

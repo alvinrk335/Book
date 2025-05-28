@@ -22,8 +22,7 @@ import com.example.book.R;
 
 public class BookDetailActivity extends AppCompatActivity {
 
-    private EditText addressInput, phoneInput;
-    private Book currentBook; // The book being displayed
+    private EditText addressInput, phoneInput;// The book being displayed
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class BookDetailActivity extends AppCompatActivity {
         TextView bookTitle = findViewById(R.id.bookTitle);
 
         // Get book data from intent
-        currentBook = getIntent().getParcelableExtra("book");
+        Book currentBook = getIntent().getParcelableExtra("book");
         if (currentBook != null) {
             bookCover.setImageResource(currentBook.getCoverImageId());
             bookTitle.setText(currentBook.getName());

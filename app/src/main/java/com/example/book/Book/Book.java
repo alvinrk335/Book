@@ -76,7 +76,6 @@ public class Book implements Parcelable {
     public String getLanguage() { return language; }
     public int getCoverImageId() { return coverImageId; }
 
-    //===== Optional: toString() for debugging =====//
     @NonNull
     @Override
     public String toString() {
