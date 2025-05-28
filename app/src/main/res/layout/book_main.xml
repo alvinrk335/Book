@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:id="@+id/categoryTabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#EAEAEA">
+
+        <Button
+            android:id="@+id/fictionTab"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E3628"
+            android:text="Fiction"
+            android:layout_marginEnd="7dp"/>
+
+        <Button
+            android:id="@+id/nonFictionTab"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1E3628"
+            android:text="Non-Fiction" />
+    </LinearLayout>
+
+    <!-- Book List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        />
+
+</LinearLayout>
